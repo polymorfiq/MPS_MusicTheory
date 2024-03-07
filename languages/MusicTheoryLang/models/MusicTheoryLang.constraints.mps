@@ -13,7 +13,34 @@
     <use id="ad93155d-79b2-4759-b10c-55123e763903" name="jetbrains.mps.lang.messages" version="0" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
-  <imports />
-  <registry />
+  <imports>
+    <import index="ems8" ref="r:e8bf4a00-4d2c-41d0-918b-66974261049f(MusicTheoryLang.structure)" implicit="true" />
+  </imports>
+  <registry>
+    <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
+      <concept id="1147467115080" name="jetbrains.mps.lang.constraints.structure.NodePropertyConstraint" flags="ng" index="EnEH3">
+        <reference id="1147467295099" name="applicableProperty" index="EomxK" />
+      </concept>
+      <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
+        <reference id="1213093996982" name="concept" index="1M2myG" />
+        <child id="1213098023997" name="property" index="1MhHOB" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="1M2fIO" id="7K_nJtnMl7f">
+    <ref role="1M2myG" to="ems8:7K_nJtnMj0E" resolve="Note" />
+    <node concept="EnEH3" id="7K_nJtnMl7E" role="1MhHOB">
+      <ref role="EomxK" to="ems8:7K_nJtnMl6z" resolve="octave" />
+    </node>
+  </node>
+  <node concept="1M2fIO" id="7K_nJtnR4GZ">
+    <property role="3GE5qa" value="Harmonies.Scales" />
+    <ref role="1M2myG" to="ems8:7K_nJtnPFw$" resolve="MajorScale" />
+  </node>
 </model>
 

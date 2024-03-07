@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-48a6pfif29uabsg1r4krlewmypo5gjd" />
+<product version="3" modelHash="d755586u0eali9f01r1gv6yyidulw1i">
+  <files names="BehaviorAspectDescriptor.java:Harmony__BehaviorDescriptor.java:MajorChord__BehaviorDescriptor.java:MajorScale__BehaviorDescriptor.java:Note__BehaviorDescriptor.java:PitchCollection__BehaviorDescriptor.java:Pitch__BehaviorDescriptor.java:Scale__BehaviorDescriptor.java" />
+</product>
 

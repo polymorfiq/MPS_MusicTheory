@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="10,0,20,0" name="MusicTheoryLang.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,31,0" name="MusicTheoryLang.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:df134192-dc10-475d-a3d9-7cdaf657ed27(MusicTheoryLang.constraints)/8945660651264102863">
+    <file name="Note_Constraints.java">
+      <node id="8945660651264102863" at="14,29,15,28" concept="5" />
+      <node id="8945660651264102863" at="19,84,20,119" concept="2" />
+      <node id="8945660651264102863" at="20,119,21,22" concept="3" />
+      <node id="8945660651264102863" at="25,0,26,0" concept="4" trace="Note$ji" />
+      <node id="8945660651264102863" at="14,0,17,0" concept="0" trace="Note_Constraints#()V" />
+      <node id="8945660651264102863" at="18,0,23,0" concept="1" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <scope id="8945660651264102863" at="14,29,15,28" />
+      <scope id="8945660651264102863" at="19,84,21,22">
+        <var name="properties" id="8945660651264102863" />
+      </scope>
+      <scope id="8945660651264102863" at="14,0,17,0" />
+      <scope id="8945660651264102863" at="18,0,23,0" />
+      <unit id="8945660651264102863" at="24,0,27,0" name="MusicTheoryLang.constraints.Note_Constraints$CONCEPTS" />
+      <unit id="8945660651264102863" at="13,0,28,0" name="MusicTheoryLang.constraints.Note_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:df134192-dc10-475d-a3d9-7cdaf657ed27(MusicTheoryLang.constraints)/8945660651265346367">
+    <file name="MajorScale_Constraints.java">
+      <node id="8945660651265346367" at="10,35,11,34" concept="5" />
+      <node id="8945660651265346367" at="15,0,16,0" concept="4" trace="MajorScale$vK" />
+      <node id="8945660651265346367" at="10,0,13,0" concept="0" trace="MajorScale_Constraints#()V" />
+      <scope id="8945660651265346367" at="10,35,11,34" />
+      <scope id="8945660651265346367" at="10,0,13,0" />
+      <unit id="8945660651265346367" at="14,0,17,0" name="MusicTheoryLang.constraints.MajorScale_Constraints$CONCEPTS" />
+      <unit id="8945660651265346367" at="9,0,18,0" name="MusicTheoryLang.constraints.MajorScale_Constraints" />
     </file>
   </root>
 </debug-info>
