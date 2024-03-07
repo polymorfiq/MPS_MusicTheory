@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="1ebqpu67j9ooqdjo1fsdkjvgmk9afej">
+<product version="3" modelHash="107c4x26qpgnln3adcudjtl7ra6yeti">
   <files names="ConceptPresentationAspectImpl.java:EnumerationDescriptor_ChordType.java:EnumerationDescriptor_MuscalMode.java:EnumerationDescriptor_NoteName.java:EnumerationDescriptor_NoteNameNormalized.java:LanguageConceptSwitch.java:StructureAspectDescriptor.java" />
 </product>
 

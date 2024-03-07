@@ -39,7 +39,9 @@
         <child id="1106270802874" name="cellLayout" index="2iSdaV" />
         <child id="1073389446424" name="childCellModel" index="3EZMnx" />
       </concept>
-      <concept id="1073389577006" name="jetbrains.mps.lang.editor.structure.CellModel_Constant" flags="sn" stub="3610246225209162225" index="3F0ifn" />
+      <concept id="1073389577006" name="jetbrains.mps.lang.editor.structure.CellModel_Constant" flags="sn" stub="3610246225209162225" index="3F0ifn">
+        <property id="1073389577007" name="text" index="3F0ifm" />
+      </concept>
       <concept id="1073389658414" name="jetbrains.mps.lang.editor.structure.CellModel_Property" flags="sg" stub="730538219796134133" index="3F0A7n" />
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ngI" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
@@ -69,6 +71,11 @@
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
       </concept>
     </language>
   </registry>
@@ -123,6 +130,19 @@
         </node>
       </node>
       <node concept="2iRfu4" id="7K_nJtnOjbG" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7K_nJtnYIxx">
+    <property role="3GE5qa" value="Harmonies.Chords" />
+    <ref role="1XX52x" to="ems8:7K_nJtnOHeH" resolve="MajorChord" />
+    <node concept="3EZMnI" id="7K_nJtnYIxE" role="2wV5jI">
+      <node concept="3F0A7n" id="7K_nJtnYIxO" role="3EZMnx">
+        <ref role="1NtTu8" to="ems8:7K_nJtnQwOE" resolve="root" />
+      </node>
+      <node concept="3F0ifn" id="7K_nJtnYIxX" role="3EZMnx">
+        <property role="3F0ifm" value="Major" />
+      </node>
+      <node concept="2iRfu4" id="7K_nJtnYIxH" role="2iSdaV" />
     </node>
   </node>
 </model>

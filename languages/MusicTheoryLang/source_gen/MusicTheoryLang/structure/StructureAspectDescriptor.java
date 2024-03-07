@@ -92,11 +92,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
 
   private static ConceptDescriptor createDescriptorForChord() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MusicTheoryLang", "Chord", 0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d355L);
-    b.class_(false, true, false);
-    // extends: MusicTheoryLang.structure.Harmony
-    b.super_(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d2fbL);
-    b.origin("r:e8bf4a00-4d2c-41d0-918b-66974261049f(MusicTheoryLang.structure)/8945660651264725845");
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("MusicTheoryLang", "Chord", 0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757f95629L);
+    b.interface_();
+    b.parent(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d35145L);
+    b.origin("r:e8bf4a00-4d2c-41d0-918b-66974261049f(MusicTheoryLang.structure)/8945660651267249705");
     b.version(3);
     return b.create();
   }
@@ -133,6 +132,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: MusicTheoryLang.structure.Harmony
     b.super_(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d2fbL);
+    b.parent(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757f95629L);
     b.origin("r:e8bf4a00-4d2c-41d0-918b-66974261049f(MusicTheoryLang.structure)/8945660651264725933");
     b.version(3);
     b.property("root", 0x7c255ef757da0d2aL).type(MetaIdFactory.dataTypeId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL)).origin("8945660651265199402").done();

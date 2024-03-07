@@ -9,10 +9,10 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -21,8 +21,9 @@ public final class Pitch__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92fa6L, "MusicTheoryLang.structure.Pitch");
 
   public static final SMethod<Float> freq_hz_id7K_nJtnMj6W = new SMethodBuilder<Float>(new SJavaCompoundTypeImpl(Float.TYPE)).name("freq_hz").modifiers(12, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651264094652L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2();
+  public static final SMethod<SNode> closestNote_id7K_nJtodIyB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("closestNote").modifiers(12, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651271284903L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(freq_hz_id7K_nJtnMj6W);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(freq_hz_id7K_nJtnMj6W, closestNote_id7K_nJtodIyB);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }

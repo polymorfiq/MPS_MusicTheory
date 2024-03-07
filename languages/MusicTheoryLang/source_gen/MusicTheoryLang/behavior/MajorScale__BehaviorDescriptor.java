@@ -113,7 +113,7 @@ public final class MajorScale__BehaviorDescriptor extends BaseBHDescriptor {
       case 16:
         return SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92c0eL, "C");
       default:
-        return SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757d8e327L, "Unknown");
+        return null;
     }
   }
   /*package*/ static int semitonesForDegree_id7K_nJtnPFCb(@NotNull SAbstractConcept __thisConcept__, int degrees) {

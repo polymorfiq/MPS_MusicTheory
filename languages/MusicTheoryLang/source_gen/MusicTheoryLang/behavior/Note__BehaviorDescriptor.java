@@ -31,8 +31,9 @@ public final class Note__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<Float> base_freq_id7K_nJtnMuEL = new SMethodBuilder<Float>(new SJavaCompoundTypeImpl(Float.TYPE)).name("base_freq").modifiers(1, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651264142001L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2(SMethodBuilder.createJavaParameter((Class<SEnumerationLiteral>) ((Class) Object.class), ""));
   public static final SMethod<SEnumerationLiteral> normalizedName_id7K_nJtnNJtr = new SMethodBuilder<SEnumerationLiteral>(new SJavaCompoundTypeImpl((Class<SEnumerationLiteral>) ((Class) Object.class))).name("normalizedName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651264472923L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2();
   public static final SMethod<SEnumerationLiteral> normalizeName_id7K_nJtnO2sS = new SMethodBuilder<SEnumerationLiteral>(new SJavaCompoundTypeImpl((Class<SEnumerationLiteral>) ((Class) Object.class))).name("normalizeName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651264550712L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2(SMethodBuilder.createJavaParameter((Class<SEnumerationLiteral>) ((Class) Object.class), ""));
+  public static final SMethod<SNode> closestNote_id7K_nJtodIyB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("closestNote").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651271284903L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(withName_id7K_nJtnP2of, freq_hz_id7K_nJtnMj6W, base_freq_id7K_nJtnMuEL, normalizedName_id7K_nJtnNJtr, normalizeName_id7K_nJtnO2sS);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(withName_id7K_nJtnP2of, freq_hz_id7K_nJtnMj6W, base_freq_id7K_nJtnMuEL, normalizedName_id7K_nJtnNJtr, normalizeName_id7K_nJtnO2sS, closestNote_id7K_nJtodIyB);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
     SPropertyOperations.assign(__thisNode__, PROPS.octave$3IC9, 0);
@@ -135,6 +136,12 @@ public final class Note__BehaviorDescriptor extends BaseBHDescriptor {
         return SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757ceeed7L, "MusicTheoryLang.structure.NoteNameNormalized"), 0x7c255ef757d00eecL, "unknown");
     }
   }
+  /*package*/ static SNode closestNote_id7K_nJtodIyB(@NotNull SNode __thisNode__) {
+    SNode cloned = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL, "MusicTheoryLang.structure.Note"));
+    SPropertyOperations.assignEnum(cloned, PROPS.name$nBvq, SPropertyOperations.getEnum(__thisNode__, PROPS.name$nBvq));
+    SPropertyOperations.assign(cloned, PROPS.octave$3IC9, SPropertyOperations.getInteger(__thisNode__, PROPS.octave$3IC9));
+    return cloned;
+  }
 
   /*package*/ Note__BehaviorDescriptor() {
   }
@@ -157,6 +164,8 @@ public final class Note__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((SEnumerationLiteral) normalizedName_id7K_nJtnNJtr(node));
       case 4:
         return (T) ((SEnumerationLiteral) normalizeName_id7K_nJtnO2sS(node, (SEnumerationLiteral) parameters[0]));
+      case 5:
+        return (T) ((SNode) closestNote_id7K_nJtodIyB(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

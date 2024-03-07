@@ -20,8 +20,10 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 0:
         return Collections.<ConceptEditor>singletonList(new EmptySpace_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new Note_Editor());
+        return Collections.<ConceptEditor>singletonList(new MajorChord_Editor());
       case 2:
+        return Collections.<ConceptEditor>singletonList(new Note_Editor());
+      case 3:
         return Collections.<ConceptEditor>singletonList(new Song_Editor());
       default:
     }
@@ -30,5 +32,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757cdb961L), MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL), MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757cdb7e3L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757cdb961L), MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d3adL), MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL), MetaIdFactory.conceptId(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757cdb7e3L)).seal();
 }

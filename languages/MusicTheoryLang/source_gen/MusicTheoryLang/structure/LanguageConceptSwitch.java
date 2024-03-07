@@ -24,7 +24,7 @@ public final class LanguageConceptSwitch {
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x87d1018d30c44219L, 0x852f1bd942b093e8L);
-    builder.put(0x7c255ef757d2d355L, Chord);
+    builder.put(0x7c255ef757f95629L, Chord);
     builder.put(0x7c255ef757cdb961L, EmptySpace);
     builder.put(0x7c255ef757d2d2fbL, Harmony);
     builder.put(0x7c255ef757d6b80dL, KeySignature);

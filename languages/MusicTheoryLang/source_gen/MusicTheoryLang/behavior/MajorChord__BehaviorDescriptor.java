@@ -10,30 +10,38 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.language.SEnumerationLiteral;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import java.util.Deque;
 import jetbrains.mps.internal.collections.runtime.LinkedListSequence;
 import java.util.LinkedList;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class MajorChord__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d3adL, "MusicTheoryLang.structure.MajorChord");
 
+  public static final SMethod<SNode> withRoot_id7K_nJto3dXR = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("withRoot").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651268530039L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2(SMethodBuilder.createJavaParameter((Class<SEnumerationLiteral>) ((Class) Object.class), ""));
   public static final SMethod<Iterable<SNode>> pitches_id7K_nJtnOP5p = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("pitches").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651264758105L).languageId(0x852f1bd942b093e8L, 0x87d1018d30c44219L).build2();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(pitches_id7K_nJtnOP5p);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(withRoot_id7K_nJto3dXR, pitches_id7K_nJtnOP5p);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
+  /*package*/ static SNode withRoot_id7K_nJto3dXR(@NotNull SNode __thisNode__, SEnumerationLiteral root) {
+    SNode chord = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d3adL, "MusicTheoryLang.structure.MajorChord"));
+    SPropertyOperations.assignEnum(chord, PROPS.root$zPX_, root);
+    return chord;
+  }
   /*package*/ static Iterable<SNode> pitches_id7K_nJtnOP5p(@NotNull SNode __thisNode__) {
     Deque<SNode> notes = LinkedListSequence.fromLinkedList(new LinkedList<SNode>());
     SNode scale = MajorScale__BehaviorDescriptor.withTonic_id7K_nJtnRyj0.invoke(SNodeOperations.asSConcept(CONCEPTS.MajorScale$vK), SPropertyOperations.getEnum(__thisNode__, PROPS.root$zPX_));
@@ -41,6 +49,7 @@ public final class MajorChord__BehaviorDescriptor extends BaseBHDescriptor {
     LinkedListSequence.fromLinkedListNew(notes).addElement(Note__BehaviorDescriptor.withName_id7K_nJtnP2of.invoke(SNodeOperations.asSConcept(CONCEPTS.Note$ji), Scale__BehaviorDescriptor.degree_id7K_nJtnPFxg.invoke(scale, ((int) 1))));
     LinkedListSequence.fromLinkedListNew(notes).addElement(Note__BehaviorDescriptor.withName_id7K_nJtnP2of.invoke(SNodeOperations.asSConcept(CONCEPTS.Note$ji), Scale__BehaviorDescriptor.degree_id7K_nJtnPFxg.invoke(scale, ((int) 3))));
     LinkedListSequence.fromLinkedListNew(notes).addElement(Note__BehaviorDescriptor.withName_id7K_nJtnP2of.invoke(SNodeOperations.asSConcept(CONCEPTS.Note$ji), Scale__BehaviorDescriptor.degree_id7K_nJtnPFxg.invoke(scale, ((int) 5))));
+    LinkedListSequence.fromLinkedListNew(notes).visitAll((note) -> SPropertyOperations.assign(note, PROPS.octave$3IC9, 3));
 
     return notes;
   }
@@ -61,6 +70,8 @@ public final class MajorChord__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
+        return (T) ((SNode) withRoot_id7K_nJto3dXR(node, (SEnumerationLiteral) parameters[0]));
+      case 1:
         return (T) ((Iterable<SNode>) pitches_id7K_nJtnOP5p(node));
       default:
         throw new BHMethodNotFoundException(this, method);
@@ -91,12 +102,13 @@ public final class MajorChord__BehaviorDescriptor extends BaseBHDescriptor {
     return CONCEPT;
   }
 
+  private static final class PROPS {
+    /*package*/ static final SProperty root$zPX_ = MetaAdapterFactory.getProperty(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d3adL, 0x7c255ef757da0d2aL, "root");
+    /*package*/ static final SProperty octave$3IC9 = MetaAdapterFactory.getProperty(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL, 0x7c255ef757c951a3L, "octave");
+  }
+
   private static final class CONCEPTS {
     /*package*/ static final SConcept MajorScale$vK = MetaAdapterFactory.getConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d6b824L, "MusicTheoryLang.structure.MajorScale");
     /*package*/ static final SConcept Note$ji = MetaAdapterFactory.getConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL, "MusicTheoryLang.structure.Note");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty root$zPX_ = MetaAdapterFactory.getProperty(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757d2d3adL, 0x7c255ef757da0d2aL, "root");
   }
 }

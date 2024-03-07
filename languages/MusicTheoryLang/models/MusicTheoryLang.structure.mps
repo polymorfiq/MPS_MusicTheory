@@ -26,7 +26,9 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
+        <child id="1169127546356" name="extends" index="PrDN$" />
+      </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -178,7 +180,7 @@
     <property role="TrG5h" value="Song" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="song" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7K_nJtnNrxJ" role="1TKVEi">
       <property role="IQ2ns" value="8945660651264391279" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -194,7 +196,7 @@
     <property role="EcuMT" value="8945660651264391361" />
     <property role="TrG5h" value="MusicalElement" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="7K_nJtnNr_x">
     <property role="EcuMT" value="8945660651264391521" />
@@ -280,13 +282,6 @@
       <ref role="PrY4T" node="7K_nJtnOP55" resolve="PitchCollection" />
     </node>
   </node>
-  <node concept="1TIwiD" id="7K_nJtnOHdl">
-    <property role="EcuMT" value="8945660651264725845" />
-    <property role="3GE5qa" value="Harmonies.Chords" />
-    <property role="TrG5h" value="Chord" />
-    <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" node="7K_nJtnOHbV" resolve="Harmony" />
-  </node>
   <node concept="1TIwiD" id="7K_nJtnOHeH">
     <property role="EcuMT" value="8945660651264725933" />
     <property role="3GE5qa" value="Harmonies.Chords" />
@@ -298,6 +293,9 @@
       <property role="TrG5h" value="root" />
       <ref role="AX2Wp" node="7K_nJtnMiKd" resolve="NoteName" />
     </node>
+    <node concept="PrWs8" id="7K_nJtnY$Kv" role="PzmwI">
+      <ref role="PrY4T" node="7K_nJtnYloD" resolve="Chord" />
+    </node>
   </node>
   <node concept="PlHQZ" id="7K_nJtnOP55">
     <property role="EcuMT" value="8945660651264758085" />
@@ -307,7 +305,7 @@
     <property role="EcuMT" value="8945660651264981005" />
     <property role="3GE5qa" value="Rhythm" />
     <property role="TrG5h" value="KeySignature" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="7K_nJtnPFwf" role="1TKVEl">
       <property role="IQ2nx" value="8945660651264981007" />
       <property role="TrG5h" value="tonic" />
@@ -398,6 +396,14 @@
     <node concept="25R33" id="7K_nJtnS4kL" role="25R1y">
       <property role="3tVfz5" value="8945660651265606961" />
       <property role="TrG5h" value="Augmented" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="7K_nJtnYloD">
+    <property role="EcuMT" value="8945660651267249705" />
+    <property role="3GE5qa" value="Harmonies.Chords" />
+    <property role="TrG5h" value="Chord" />
+    <node concept="PrWs8" id="7K_nJtnY_mD" role="PrDN$">
+      <ref role="PrY4T" node="7K_nJtnOP55" resolve="PitchCollection" />
     </node>
   </node>
 </model>
